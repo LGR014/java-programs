@@ -10,6 +10,7 @@ public class DealershipGame {
         boolean[] bought = {false, false, false, false, false}; 
         int purchased = 0;
         double budget = 75000;
+        int totalAmount = 0;
         
         
 
@@ -37,11 +38,6 @@ public class DealershipGame {
         String chosenCar = cars[choice];
         double chosenPrice = prices[choice];
 
-
-            
-       
-       
-
         if (chosenPrice <= budget) {
             budget = budget - chosenPrice;
             bought[choice] = true;
@@ -53,11 +49,14 @@ public class DealershipGame {
         }
         for (int i = 0; i < bought.length; i++) {
             if (bought[i] == true) {
-                purchased++;
+                purchased++;  
+                totalAmount += prices[i];    
             }
         }
+
         System.out.println("\n Your budget isn't sufficient for any more vehicles!"); 
         System.out.println("\n You have purchased " + purchased + " vehicles!");
+        System.out.println("\n Total money spent: $" + totalAmount);
         System.out.println("\n Thank you for visiting Kanata Hyundai!");    
         
     }
