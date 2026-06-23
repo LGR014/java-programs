@@ -29,7 +29,6 @@ public class DealershipGame {
             System.out.println((i + 1) + ". " + cars[i] + " $" + prices[i]);  
         } 
     }  
-
         System.out.println("\nEnter the number of the car you want to buy: ");
             int choice = scanner.nextInt();
             choice = choice - 1;
@@ -68,7 +67,6 @@ public class DealershipGame {
             }
         }
     } 
-
         System.out.println("\n Your budget isn't sufficient for any more vehicles!"); 
         System.out.println("\n You have purchased " + purchased + " vehicles!");
         System.out.println("\n Total money spent: $" + totalAmount);
